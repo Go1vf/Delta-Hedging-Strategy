@@ -110,7 +110,6 @@ int Simulation::generateOutout(std::string t0, std::string tN, std::string expir
     // Find the implied volatility
     for (int i = 0; i < optionPrices_op.size(); i++) {
         OptionPrice optionPrice(K, flag);
-        std::cout << N - i*(1/255.0) << std::endl;
         double volt = optionPrice.findImpliedVolatity(stockPrices_op[i], interest_op[i], N - i*(1/255.0), optionPrices_op[i]);
         implied_volality.push_back(volt);
     }
@@ -134,7 +133,7 @@ int Simulation::generateOutout(std::string t0, std::string tN, std::string expir
 
 
     // Output data as result.csv
-    std::ofstream outFile("result.csv");
+    std::ofstream outFile("result/result.csv");
     if (!outFile.is_open()) {
         std::cerr << "Error: Could not open output file!" << std::endl;
         return -1;

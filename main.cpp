@@ -9,6 +9,7 @@
 #include <random>
 #include "CSVReader.cpp"
 #include "Simulation.hpp"
+#include "UnitTest/Test.cpp"
 
 int main() {
     double S0 = 100.0; // Initial stock price
@@ -124,5 +125,9 @@ int main() {
     // Issue
     Simulation simulation(interestRates, stockPrices, optionPrices);
     simulation.generateOutout("2011-07-05", "2011-07-29", "2011-09-17", 500.0, 'C');
+
+    // Test
+    testCalculateImpliedVolatility();
+    testDelta();
     return 0;
 }

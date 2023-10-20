@@ -35,7 +35,7 @@ The project simulates the Delta Hedging strategy for options trading. The main g
 
 ### Simulation
 
-- Simulates stock prices, option prices, and interest rates.
+- Retrieve real-life stock prices, option prices, and interest rates from csv.
 - Provides functionality to generate output based on the simulations.
 - Contains methods to convert date strings to `std::tm` and find data in a specific date range.
 - See the simulation code [here](https://github.com/Go1vf/Delta-Hedging-Strategy/blob/main/Simulation.cpp).
